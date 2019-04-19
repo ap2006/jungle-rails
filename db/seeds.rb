@@ -32,7 +32,7 @@ cat3 = Category.find_or_create_by! name: 'Furniture'
 ## PRODUCTS
 
 puts "Re-creating Products ..."
-
+LineItem.destroy_all
 Product.destroy_all
 
 cat1.products.create!({
@@ -134,3 +134,31 @@ cat3.products.create!({
 
 
 puts "DONE!"
+
+
+puts "Creating Users..."
+
+User.destroy_all
+
+user1 = User.create!(firstname: 'Emanuel', lastname: 'Rhodes', email: 'test1@test.com', password: 'qwerty')
+user2 = User.create!(firstname: 'Jon', lastname: 'Snow', email: 'test2@test.com', password: 'asdfg')
+
+# REVIEWS
+
+puts "Creating Reviews ..."
+
+Review.destroy_all
+
+Review.create!({
+  product_id:  Product.first.id,
+  user_id: User.first.id,
+  description: "This is so great buy it",
+  rating: 4
+})
+
+Review.create!({
+  product_id:  Product.last.id,
+  user_id: User.last.id,
+  description: "Not too happy with it",
+  rating: 2
+})
