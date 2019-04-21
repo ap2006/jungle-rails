@@ -4,6 +4,15 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Screenshots
 
+Jungle Store Homepage:
+
+!["Homepage on Load"](https://github.com/ap2006/jungle-rails/blob/master/docs/homepage.png)
+
+
+Jungle Cart Page:
+
+!["Men's Shirt in the Shopping Cart"](https://github.com/ap2006/jungle-rails/blob/master/docs/cart_page.png)
+
 
 ## Setup
 
