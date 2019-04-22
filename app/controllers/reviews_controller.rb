@@ -13,17 +13,17 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # /products/:product_id/reviews/:id
-  def destroy
-    @product = Product.find params[:product_id]
-    @review = Review.find params[:id]
-
-    if @review.destroy
-      redirect_to product_path(@product.id.reviews)
-    else
-      render 'products/show'
-    end
-  end
+  # # /products/:product_id/reviews/:id
+  # def destroy
+  #   @product = Product.find params[:product_id]
+  #   @review = Review.find params[:id]
+  # 
+  #   if @review.destroy
+  #     redirect_to product_path(@product.id.reviews)
+  #   else
+  #     render 'products/show'
+  #   end
+  # end
 
   private
 
