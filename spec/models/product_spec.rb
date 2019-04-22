@@ -21,17 +21,17 @@ RSpec.describe Product, type: :model do
       expect(subject).to be_valid
     end
 
-  it 'is not valid without a price' do
+    it 'is not valid without a price' do
     subject.price_cents = nil
     expect(subject).to_not be_valid
-  end
+    end
 
-  it 'is not valid without a quantity' do
+    it 'is not valid without a quantity' do
     subject.quantity = nil
     expect(subject).to_not be_valid
-  end
+    end
 
-  it 'is not valid without a category' do
+    it 'is not valid without a category' do
     subject.category = nil
     expect(subject).to_not be_valid
     end
